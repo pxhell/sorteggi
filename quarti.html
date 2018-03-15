@@ -13,27 +13,42 @@
 		<span id="q1">&nbsp;</span> - <span id="q2">&nbsp;</span><br>
 		<span id="q3">&nbsp;</span> - <span id="q4">&nbsp;</span><br>
 		<span id="q5">&nbsp;</span> - <span id="q6">&nbsp;</span><br>
-		<span id="q7">&nbsp;</span> - <span id="q8">&nbsp;</span>
+		<span id="q7">&nbsp;</span> - <span id="q8">&nbsp;</span><br><br><br>
+
+		<span id="q9">&nbsp;</span> - <span id="q10">&nbsp;</span><br>
+		<span id="q11">&nbsp;</span> - <span id="q12">&nbsp;</span><br>
+		<span id="q13">&nbsp;</span> - <span id="q14">&nbsp;</span><br>
+		<span id="q15">&nbsp;</span> - <span id="q16">&nbsp;</span>
 	</div>
 
 	<script type="text/javascript">
 		var teams = ['Juventus','Bayern München','Sevilla','Real Madrid','Roma','Barcelona','Liverpool','Manchester City'];
+		var teams2 = ['Atlético Madrid','Lazio','RB Leipzig','Marsiglia','Sporting Lisbona','CSKA Mosca','Red Bull Salisburgo','Arsenal'];
 
-		function sorteggia(k){
-			var r = Math.floor(Math.random()*teams.length)
-			var squadra = teams[r];
+		function sorteggia(k, a){
+			var r = Math.floor(Math.random()*a.length)
+			var squadra = a[r];
 			k = k.toString();
-			teams.splice(r, 1);
+			a.splice(r, 1);
 			document.getElementById('q'+k).innerHTML = squadra;
 		}
-		window.setTimeout(function(){sorteggia(1)}, 1000);
-		window.setTimeout(function(){sorteggia(2)}, 2000);
-		window.setTimeout(function(){sorteggia(3)}, 3000);
-		window.setTimeout(function(){sorteggia(4)}, 4000);
-		window.setTimeout(function(){sorteggia(5)}, 5000);
-		window.setTimeout(function(){sorteggia(6)}, 6000);
-		window.setTimeout(function(){sorteggia(7)}, 7000);
-		window.setTimeout(function(){sorteggia(8)}, 8000);
+		window.setTimeout(function(){sorteggia(1, teams)}, 1000);
+		window.setTimeout(function(){sorteggia(2, teams)}, 2000);
+		window.setTimeout(function(){sorteggia(3, teams)}, 3000);
+		window.setTimeout(function(){sorteggia(4, teams)}, 4000);
+		window.setTimeout(function(){sorteggia(5, teams)}, 5000);
+		window.setTimeout(function(){sorteggia(6, teams)}, 6000);
+		window.setTimeout(function(){sorteggia(7, teams)}, 7000);
+		window.setTimeout(function(){sorteggia(8, teams)}, 8000);
+
+		window.setTimeout(function(){sorteggia(9, teams2)}, 10000);
+		window.setTimeout(function(){sorteggia(10, teams2)}, 11000);
+		window.setTimeout(function(){sorteggia(11, teams2)}, 12000);
+		window.setTimeout(function(){sorteggia(12, teams2)}, 13000);
+		window.setTimeout(function(){sorteggia(13, teams2)}, 14000);
+		window.setTimeout(function(){sorteggia(14, teams2)}, 15000);
+		window.setTimeout(function(){sorteggia(15, teams2)}, 16000);
+		window.setTimeout(function(){sorteggia(16, teams2)}, 17000);
 	</script>
 </body>
 </html>
