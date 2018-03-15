@@ -27,7 +27,7 @@
 			document.getElementById('q'+k).innerHTML = squadra;
 		}
 		for (var i = teams.length - 1; i >= 0; i--) {
-			sorteggia(i+1);
+			window.setTimeout(function(){sorteggia(i+1)}, 1000);
 		}
 	</script>
 </body>
