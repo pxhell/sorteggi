@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Quarti</title>
+<style type="text/css">
+	body, html { margin: 0; height: 100%; width: 100%; overflow: hidden; text-align: center; font-size:25px; }
+	span { display: inline-block; margin:  10px 0; }
+</style>
+</head>
+<body>
+	<div style="padding-top:100px">
+		<span id="q1">&nbsp;</span> - <span id="q2">&nbsp;</span><br>
+		<span id="q3">&nbsp;</span> - <span id="q4">&nbsp;</span><br>
+		<span id="q5">&nbsp;</span> - <span id="q6">&nbsp;</span><br>
+		<span id="q7">&nbsp;</span> - <span id="q8">&nbsp;</span>
+	</div>
+
+	<script type="text/javascript">
+		var teams = ['Juventus','Bayern München','Sevilla','Real Madrid','Roma','Barcelona','Liverpool','Manchester City'];
+
+		function sorteggia(k){
+			var r = Math.floor(Math.random()*teams.length)
+			var squadra = teams[r];
+			k = k.toString();
+			teams.splice(r, 1);
+			document.getElementById('q'+k).innerHTML = squadra;
+		}
+		for (var i = teams.length - 1; i >= 0; i--) {
+			sorteggia(i+1);
+		}
+	</script>
+</body>
+</html>
